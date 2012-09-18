@@ -3,8 +3,8 @@
 APP_NAME=searchselected
 PUSH_TO_DEVICE=1
 #nightly
-ANDROID_APP_ID=org.mozilla.fennec
-#ANDROID_APP_ID=org.mozilla.firefox_beta
+#ANDROID_APP_ID=org.mozilla.fennec
+ANDROID_APP_ID=org.mozilla.firefox_beta
 #ANDROID_APP_ID=org.mozilla.firefox
 
 if [ -f "$APP_NAME.xpi" ]; then
@@ -14,7 +14,7 @@ fi
 
 echo "Zipping $APP_NAME.xpi"
 
-zip -r $APP_NAME.xpi install.rdf bootstrap.js chrome.manifest content defaults -x .*
+zip -r $APP_NAME.xpi install.rdf bootstrap.js chrome.manifest content defaults -x **/.*
 
 
 
